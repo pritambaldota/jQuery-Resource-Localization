@@ -1,0 +1,3 @@
+﻿ResKey1:Text Resource 1
+ResKey2:Text Resource 2
+ResKey3:Text Resource 3 <span> Html Text </span>

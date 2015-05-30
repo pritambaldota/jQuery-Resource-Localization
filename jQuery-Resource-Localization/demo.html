@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>jQuery Resource Localization Plugin</title>
+    <!-- Dependent Libraries-->
+    <script src="Scripts/jquery-1.10.0.min.js"></script>
+    <script src="Scripts/jquery-cultureinfo-1.0.0.0.min.js"></script>
+
+    <!-- Plugin Reference-->
+    <script src="Scripts/jquery-resource-localization.1.0.0.0.min.js"></script>
+
+    <!-- Initialize Plugin -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            jqueryLocalization.Initialize({
+                resourceName: "myResourceFile", // Resource File name
+                callback: resourceLoaded, // Success call back handler. After this call back you can use resources.
+                errorCallback: errorOnResourceLoad, // Error call back handler
+                scriptRoot: "Scripts/Global_Resources", // Relative Location for Resource files
+                resxExtension: 'txt', // Default Resource file type will be txt if not provided. Valid types will either js or txt.
+                culture: "mr-IN", // Provide either culture or lcid. culture will have higher priority, if provided lcid will be ignored.
+                //lcid: 1033,
+                //cache: true,  // Default will be true if not provided. If Initialize called multiple times, it will return result from cache.
+            });
+        });
+
+        // Success handler
+        function resourceLoaded() {
+            // Start accessing resource
+            //Show all culture information. 
+            $("#cultureInfo").text(JSON.stringify(jqueryLocalization.CurrentCulture));
+
+            // Show Resource Values 
+            // Usage like Array : provide key name in brackets
+            $("#resValue1").text(jqueryLocalization.Resources["ResKey1"]);
+
+            // Usage like Object : provide key name as property
+            $("#resValue2").text(jqueryLocalization.Resources.ResKey2);
+
+            // Usage like Object : provide key name as property
+            $("#resValue3").text(jqueryLocalization.Resources.ResKey3);
+        }
+
+        //error callback
+        function errorOnResourceLoad(error) {
+            if (error !== undefined) {
+                console.log(error.message);
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <h1>JQuery Resource Localization</h1>
+    <hr />
+    <h2>English Resource</h2>
+    <table border="1" cellpadding="3" cellspacing="3">
+        <tr>
+            <td>
+                Culture Information :
+            </td>
+            <td>
+                <div id="cultureInfo"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Resource Key 1:
+            </td>
+            <td>
+                <div id="resValue1"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Resource Key 2:
+            </td>
+            <td>
+                <div id="resValue2"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Resource Key 3:
+            </td>
+            <td>
+                <div id="resValue3"></div>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

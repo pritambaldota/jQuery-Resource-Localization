@@ -57,10 +57,27 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Scripts\jquery-1.10.0.intellisense.js" />
+    <Content Include="demo.html" />
+    <Content Include="Scripts\Global_Resources\myResourceFile.mr-IN.txt" />
+    <Content Include="Scripts\Global_Resources\myResourceFile.mr-IN.js" />
+    <Content Include="Scripts\Global_Resources\myResourceFile.txt" />
+    <Content Include="Scripts\Global_Resources\myResourceFile.js" />
+    <Content Include="Scripts\Global_Resources\myResourceFile.en-US.js" />
+    <Content Include="Scripts\Global_Resources\myResourceFile.en-US.txt" />
+    <Content Include="Scripts\jquery-1.10.0.js" />
+    <Content Include="Scripts\jquery-1.10.0.min.js" />
+    <Content Include="Scripts\jquery-cultureinfo-1.0.0.0.js" />
+    <Content Include="Scripts\jquery-cultureinfo-1.0.0.0.min.js" />
+    <Content Include="Scripts\jquery-resource-localization.1.0.0.0.min.js" />
+    <Content Include="Scripts\jquery-resource-localization.1.0.0.0.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\jquery-1.10.0.min.map" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
