@@ -20,7 +20,7 @@ Search for  **Jquery Resource Localization** into NuGet Gallery and click instal
 
 ## Run demo-localization.html file to see working example.
 
-![](/demo_1.JPG)
+![](/demo.JPG)
 
 # Documentation
 Follow below steps to integrate jQuery Resource Localization plugin to your web application.
