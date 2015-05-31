@@ -14,16 +14,19 @@ Jquery Resource Localization plugin is a NuGet package that augments an existing
 ```nuget
 Install-Package PritamBaldota.JqueryResourceLocalization
 ```
-Search for  **Jquery Resource Localization** into NuGet Gallery and click install. See image below
+Search for  **Jquery Resource Localization** into NuGet Gallery and click install. See image below-
+
 ![](/add_nuget_package.JPG)
 
 ## Run demo-localization.html file to see working example.
+
 ![](/demo_1.JPG)
 
 # Documentation
 Follow below steps to integrate jQuery Resource Localization plugin to your web application.
 ## Solution Structure
 Keep your resource files to any of the folder. Default folder structure will be Scripts/Global_Resources. You have add seperate resource files per locale which you want to include into your solution. Along with this one default resource file without locale identifier must be added as fallback option. This default file will be used to load resources if culture is not specified.
+
 ![](/solution_structure.JPG)
 
 ## File Names for Resources
