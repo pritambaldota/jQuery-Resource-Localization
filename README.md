@@ -1,5 +1,5 @@
 # jQuery-Resource-Localization
-Create client side (JavaScript) based Resource Localization in any web application. 
+Create client side (JavaScript) based Resource Localization in any web application. Extremely light-weight library, just 3KB (Minified) and 8KB(Debug) version.
 
 Implementing client side localization into any web application is always challenge. Most of web technologies provide localization using server-side technologies. For e.g. .Net application uses Resources Files(.resx) to implement localization into globalize application. 
 
