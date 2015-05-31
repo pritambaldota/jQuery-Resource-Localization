@@ -24,7 +24,7 @@ Search for  **Jquery Resource Localization** into NuGet Gallery and click instal
 Follow below steps to integrate jQuery Resource Localization plugin to your web application.
 ## Solution Structure
 Keep your resource files to any of the folder. Default folder structure will be Scripts/Global_Resources. You have add seperate resource files per locale which you want to include into your solution. Along with this one default resource file without locale identifier must be added as fallback option. This default file will be used to load resources if culture is not specified.
-![](/solution_structure.jpg)
+![](/solution_structure.JPG)
 
 ## File Names for Resources
 Resource files must have same name for all locale. Add culture as part of file name for each culture. For e.g if your web application supports for English United States(en-US), Marathi India (mr-IN), French France (fr-fr)  language, then you must have 4 resource files. One default without any locale identifier and one for each locale. So say your resource file base name is myWebAppresource, then resulting file names will be -
