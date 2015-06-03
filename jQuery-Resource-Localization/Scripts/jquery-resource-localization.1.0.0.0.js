@@ -27,7 +27,6 @@ SOFTWARE.
 ***********************************************************************/
 
 (function ($) {
-    //var resxExtension = "txt";
     window.jqueryLocalization = {
         Author: "Pritam Baldota",
         Version: "1.0.0.0",
@@ -35,8 +34,6 @@ SOFTWARE.
         CurrentCulture: {}, // Fill the Culture Information. It depends upon another plugin https://github.com/pritambaldota/Jquery-Culture-Info 
         Initialize: function (options) {
             // A comma separates the different values
-            //var defaults = {};
-            // var options = $.extend(defaults, options);
             var optionsinternal = {
                 resourceName: options.resourceName || "", // Name of Resource File without local and extension for e.g. myProjectresource.1033.txt is file so your app name will be myProjectresource
                 callback: options.callback, // Callback once all resource has been loaded, so user can use after this
@@ -48,6 +45,8 @@ SOFTWARE.
                 cache: options.cache || true, // Default cache is true
             };
 
+            // Local file extensino postfix
+            var fileNamePostfix = "";
             var jqL = this;
             //Cache Object if resources already loaded then cache is true then return the same result
             if (optionsinternal.cache && this.Resources !== undefined && this.Resources.__Exists) {
@@ -77,19 +76,19 @@ SOFTWARE.
                 if (this.CurrentCulture == undefined) {
                     console.log("No culture found for given input. Loading resources from default file");
                     // Take Default fallback Resource file
-                    optionsinternal.resxExtension = "." + optionsinternal.resxExtension;
+                    fileNamePostfix = "." + optionsinternal.resxExtension;
                 }
                 else {
-                    optionsinternal.resxExtension = "." + this.CurrentCulture.CultureName + "." + optionsinternal.resxExtension;
+                    fileNamePostfix = "." + this.CurrentCulture.CultureName + "." + optionsinternal.resxExtension;
                 }
             }
             else {
                 // Take Default fallback Resource file
-                optionsinternal.resxExtension = "." + optionsinternal.resxExtension;
+                fileNamePostfix = "." + optionsinternal.resxExtension;
             }
 
             //Inject scripts
-            var filename = optionsinternal.scriptRoot + "/" + optionsinternal.resourceName + optionsinternal.resxExtension;
+            var filename = optionsinternal.scriptRoot + "/" + optionsinternal.resourceName + fileNamePostfix;
             console.log("Resource identified - " + filename);
             //Clear Resource before processing
             jqL.Resources = {};
