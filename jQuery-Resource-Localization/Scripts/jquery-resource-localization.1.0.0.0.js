@@ -42,7 +42,7 @@ SOFTWARE.
                 lcid: options.lcid, // lcid for e.g. 1033 to load resource for this locale.
                 scriptRoot: options.scriptRoot || "Scripts/Global_Resources", // Resoruce files relative folder location. If not provided default will be used
                 resxExtension: options.resxExtension || "txt", // Type of resources to create default is text file based, it can be either JS or TXT
-                cache: options.cache || true, // Default cache is true
+                cache: options.cache === undefined ? true : options.cache, // Default cache is true
             };
 
             // Local file extensino postfix
